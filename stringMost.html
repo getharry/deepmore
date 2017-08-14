@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		
+		.c1{
+			float: left;
+			width: 20%;
+			height: 500px;
+			background: green;
+		}
+		.c2{
+
+			float: right;
+			width: 80%;
+			height: 500px;
+			background: yellow;
+		}
+	</style>
+</head>
+<body>
+
+<!-- 利用百分比实现了一个响应式两列布局 -->
+		<div class="c1"></div>
+		<div class="c2"></div>
+	
+	<script type="text/javascript">
+		//用一个函数来实现获取一个字符串中出现次数最多的字母
+		function tongji(str) {
+			// body...
+			var mr = {};
+			var arr = str.split('');
+			console.log(arr);
+			for (var i = 0; i < arr.length; i++) {
+				if(!mr[arr[i]]){
+					mr[arr[i]] = 1;
+				}else{
+					mr[arr[i]] += 1;
+				}
+			}
+			console.log(mr);
+			var er = [];
+			for (var i in mr) {
+				er.push(mr[i]);
+			}
+			function compare(a,b){
+				return a-b;
+			}
+			er.sort(compare);
+			console.log(er);
+			var max = er[er.length-1];
+			console.log(max);
+			for (var i in mr){
+				if(mr[i] == max){
+					console.log('字符串里面出现最多的就是'+i);
+				}
+			}
+		}
+		var abc = 'abbcccddddeeeeeeeeeeeee';
+		tongji(abc);
+
+	</script>
+</body>
+</html>
