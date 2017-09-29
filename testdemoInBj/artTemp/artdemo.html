@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>多个art模版可以共用在同一个页面</title>
+</head>
+<body>
+	<h2>hello,我是本页面的标签！</h2>
+	<div id="ren"></div>
+
+	<div id="another"></div>
+
+
+</body>
+
+	<script src="template-web.js"></script>
+
+	<script type="text/html" id="tpl">
+		{{if title}}
+		<h1>{{title}}</h1>
+		{{/if}}
+		<h3>{{arr}}</h3>
+		<ul>
+		{{each arr value index}}
+			<li>{{value}}</li>
+		{{/each}}
+		</ul>
+		<ul>
+			{{each arr}}
+			<li>{{$index}}----->{{$value}}</li>
+			{{/each}}
+		</ul>
+		<h1>{{flex.ok}}</h1>
+		<h2>{{arr[1]}}</h2>
+		<h3>{{flex}}</h3>
+		<h3>{{flex['no']}}</h3>
+		<h1>{{stron}}</h1>
+		<h1>{{@stron}}</h1>
+		
+	</script>
+
+	<script type="text/html" id="tpl2">
+		<h1>{{title}}</h1>
+		<h3>今天干了些什么？</h3>
+		<h3>neirong.riqi</h3>
+		<h3>neirong.action</h3>
+
+	</script>
+
+	<script type="text/javascript">
+		var data = {
+			title: '模板引擎1',
+			arr: ['apple','orange','hahhahha'],
+			flex: {
+				ok: 'hao',
+				no: 'bu'
+			},
+			stron: '<i>haoxiang</i>'
+		}
+		var art = template('tpl',data);
+		document.getElementById('ren').innerHTML = art;
+
+		var data2 = {
+			title: '模版引擎2',
+			neirong: {
+				riqi: '9.10',
+				action: 'go to shenzhenwan'
+			}
+		}
+		var art2 = template('tpl2',data2);
+		document.getElementById('another').innerHTML = art2;
+
+	</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<div>
+		<a href="javascript:void(0)"></a>
+		<span id="dianwo">点我啊</span>
+	</div>
+	<script src="jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$('#dianwo').on('click',function() {
+			// var a = $("<a href='https://www.baidu.com' target='_blank'>Apple</a>").get(0);
+			// var e = document.createEvent('MouseEvents');
+			// e.initEvent( 'click', true, true );
+			// a.dispatchEvent(e);
+
+			var temp = window.open('https://www.baidu.com');
+
+
+		});
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="jquery-3.2.1.js"></script>
+</head>
+<body>
+	<div id="import"></div>
+	<script type="text/javascript">
+		$('#import').html('<a><span>巴厘岛</span></a> <a><span>斯里兰卡</span></a>');
+		var anode = $('#import a');
+		$.each(anode,function(i) {
+			$(this).attr('href','http://www.beejeen.com/html/country-cn.html?'+ $(this).find('span').text());
+		})
+		//试验了一下，对于刚刚html方法加入的新节点，jq选择器可以马上获取到，并且对属性进行操作
+	</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var str = '亚洲';
+		function toEn(str) {
+			switch(str){
+				case '亚洲':
+					return 'Asia';
+				case '欧洲':
+					return 'Europe';
+				case '非洲':
+					return 'Africa';
+				case '北美洲':
+					return 'North America';
+				case '南美洲':
+					return 'South America';
+				case '大洋洲':
+					return 'Oceania';
+				case '南极洲':
+					return 'Antarctica';	
+
+			}
+		}
+		String.prototype.dazhouToEn = function() {
+			console.log(this);
+			var self = this.toString();//我的天啊，toString太重要了，因为this是一个对象啊
+			switch(self){
+				case '亚洲':
+					return 'Asia';
+					break;
+				case '欧洲':
+					return 'Europe';
+				case '非洲':
+					return 'Africa';
+				case '北美洲':
+					return 'North America';
+
+				case '南美洲':
+					return 'South America';
+				case '大洋洲':
+					return 'Oceania';
+				case '南极洲':
+					return 'Antarctica';
+
+			}
+		}
+		String.prototype.daxie = function(){
+			return 'dfdfdfaaa';
+
+		}
+		console.log('abc'.daxie());
+
+
+		var ss = '亚洲';
+		console.log(toEn(ss));
+		console.log(ss.dazhouToEn());
+
+		var abcd = {
+			a: 'er',
+			b: 'fe',
+			c: 'fdf'
+		}
+		var qt;
+		qt = abcd;
+		console.log(qt);
+
+
+
+	</script>
+</body>
+</html>
