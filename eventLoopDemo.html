@@ -6,16 +6,30 @@
 </head>
 <body>
 	<script type="text/javascript">
-		setTimeout(function () {
+		// setTimeout(function () {
+		// 	console.log('timeout1');
+		// })
+		// new Promise(function(resolve){
+		// 	console.log('promise1');
+		// 	for(var i=0;i<1000;i++){
+		// 		i==99&&resolve();
+		// 	}
+		// 	console.log('promise2');
+		// }).then(function(){
+		// 	console.log('then1');
+		// })
+		// console.log('global1');
+		//ES6改写如下
+		setTimeout(() => {
 			console.log('timeout1');
 		})
-		new Promise(function(resolve){
+		new Promise(resolve => {
 			console.log('promise1');
-			for(var i=0;i<1000;i++){
+			for(let i=0;i<1000;i++){
 				i==99&&resolve();
 			}
 			console.log('promise2');
-		}).then(function(){
+		}).then(() => {
 			console.log('then1');
 		})
 		console.log('global1');
