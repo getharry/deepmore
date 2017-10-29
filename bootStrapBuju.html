@@ -35,6 +35,18 @@
 		    float: left;
 		    line-height: 19px;
 		    margin: 10px 0px;
+		    animation-name: fadeInLeft;
+		    animation-duration: 1s;
+		}
+		@keyframes fadeInLeft{
+			0%{
+				opacity: 0;
+				transform: translateX(-20px);
+			}
+			100%{
+				opacity: 1;
+				transform: translateX(0);
+			}
 		}
 		@media (max-width: 991px) and (min-width: 768px){}
 		#header .header-content .header-text {
