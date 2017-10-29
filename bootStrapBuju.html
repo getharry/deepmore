@@ -48,6 +48,19 @@
 				transform: translateX(0);
 			}
 		}
+		.zoomIn{
+			animation-name: zoIn;
+			animation-duration: 1s;
+		}
+		@keyframes zoIn{
+			0%{
+				opacity: 0;
+				transform: scale3d(.3,.3,.3);
+			}
+			50%{
+				opacity: 1;
+			}
+		}
 		@media (max-width: 991px) and (min-width: 768px){}
 		#header .header-content .header-text {
 		    padding-top: 40px;
@@ -57,6 +70,7 @@
 <body>
 <!-- 滚动监听插件waypoint实现顶部导航闪现 -->
 <!-- download和new这两个按钮十分有意思，都设了float，中间用一个空div隔开 -->
+<!-- CSS动画效果 -->
 <header id="header">        
     
     <nav id="navigation" class="navbar">            
@@ -101,7 +115,7 @@
                     	<div class="header-heading">
                             <h1>Mr. Habit - Habit Tracker &amp; Schedule</h1>
                         </div>
-                        <p>Innovative assistant for forming habits at a time convenient for you. Many functions and flexibility of settings will satisfy any of your requirements, and a new system of analysis and level of adaptation will help to track progress in achieving your goals</p>
+                        <p class="zoomIn">Innovative assistant for forming habits at a time convenient for you. Many functions and flexibility of settings will satisfy any of your requirements, and a new system of analysis and level of adaptation will help to track progress in achieving your goals</p>
                         <div class="header-button">
                             
                             <a href="#download" class="btn-custom btn-more-link btn-icon animation smooth-scroll animated animation-fade-in-left" data-animation="animation-fade-in-left">
