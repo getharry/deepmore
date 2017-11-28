@@ -68,7 +68,7 @@
 		//统计一个字符串里面，每个字母出现的次数，用reduce，ie9以下浏览器不支持该方法
 		//我们在reduce的第二个参数里面初始化了回调函数第一个参数的类型和值
 		//reduce回调函数的第二个参数代表当前被处理的数组项
-		var arrString = 'abccbabc';
+		var arrString = 'abccbabcccc';
 		var openres = arrString.split('').reduce(function(x,y){
 			x[y]?x[y]++ : x[y]=1;
 			return x;
